@@ -13,8 +13,8 @@ import shap  # 导入SHAP库
 import traceback
 
 # 文件路径 - 使用原始字符串避免转义问题
-model_path = r'C:\Users\AMDYE\OneDrive\python\results\root\models\CD_root_change_ExtraTrees_model.pkl'
-csv_data_path = r'C:\Users\AMDYE\OneDrive\python\机器学习\特征工程和归一化\归一化\results\fully_processed_data(4).csv'
+model_path = r'模型pkl地址（机器学习可以用，非机器学习可删去下面的模型获取特征重要性函数）'
+csv_data_path = r'模型csv文件（计算shap用），同上可删去'
 
 # 设置全局字体为Times New Roman
 plt.rcParams['font.family'] = 'Times New Roman'
@@ -330,8 +330,8 @@ def create_feature_importance_visualization(importance_df, shap_values, has_real
         "CEC": "CEC",
         "temperature": "Temperature",
         "material type code": "Material Type",
-        "variety binary": "Varity Binary",         # 修改为varbinary
-        "irrigation type": "Irrigation type"        # 修改为irrigatype
+        "variety binary": "Varity Binary",         
+        "irrigation type": "Irrigation type"        
     }
 
     # 特殊处理的特征及其颜色配置
@@ -673,9 +673,9 @@ def create_feature_importance_visualization(importance_df, shap_values, has_real
     plt.tight_layout(rect=[0.07, 0, 0.93, 1])  # 为左右两侧颜色条留出空间
     
     # 保存图像
-    output_dir = r'C:\Users\AMDYE\OneDrive\桌面\机器学习\图像'
+    output_dir = r'看自己'
     os.makedirs(output_dir, exist_ok=True)
-    save_path = os.path.join(output_dir, 'root.PDF')
+    save_path = os.path.join(output_dir, 'root.PDF'（保存pdf矢量图方便ai中修改）)
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     print(f"图像已保存至: {save_path}")
     
